@@ -25,38 +25,26 @@ p.tInterTrial = 400; % inter trial interval
 %% generate the trial arrays
 
 % generate practice block
-practiseBlockStims = repmat(p.stimItems,1,p.pracTrialsPerStim);
+practiseBlock = repmat(p.stimItems,1,p.pracTrialsPerStim);
     
 % generate experimental block
-experimentalBlockStims = repmat(p.stimItems,1,p.trialsPerStim);
-
-% mark where the instructions will be presented and the type of
-% instructions
-
-
+experimentalBlock = repmat(p.stimItems,1,p.trialsPerStim);
 
 
 if p.pracBeforeEveryBlock == 0
     allExperimentalTrials = [];
     for i = 1 : p.nBlocks
-       allExperimentalTrials = [allExperimentalTrials,shuffle(experimentalBlockStims)]; 
+       allExperimentalTrials = [allExperimentalTrials,shuffle(experimentalBlock)]; 
     end
     
-    allTrials = [practiseBlockStims,allExperimentalTrials];
+    allTrials = [practiseBlock,allExperimentalTrials];
     
 else
     error('Whoops! Haven''t coded that option!')
 end
 
-%% present the instructions
+%% present the trials
 
 
 
-%% present the trials 
-
-for t = 1 : size(size(allTrials,2))
-    
-    
-end
-    
 
