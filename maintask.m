@@ -6,14 +6,19 @@
 clear;
 close all;
 clc
+
 try
     
-   % General questions to ask before hand 
-   fprintf('First some demographic questions.\n\n\n');
+    %General questions to ask before hand
+    fprintf('First some demographic questions.\n\n\n');
+    
     subjdata.code = input('What is the participant code? ','s');
     
     subjdata.age = input('What is the participant age? ','s');
     
+    subjdata.gender = input('What is the participant age? ','s');
+    
+    subjdata.runtime = datestr(now,0);
     
     
     
@@ -144,8 +149,20 @@ try
         
     end
     
+    
+    if exist('data','dir')==0
+        mkdir('data')
+    end
+    
+    save(['data/',subjdata.code,'_data.mat'],'responseStruct','subjdata');
+    ListenChar
+    sca
 catch ME
     ListenChar
     sca
-    save([subjdata.code,'.mat'])
+    
+    if exist('error','dir')==0
+        mkdir('data')
+    end
+    save(['error/',subjdata.code,'_error.mat']);
 end
