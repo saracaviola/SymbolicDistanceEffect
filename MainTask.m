@@ -16,7 +16,10 @@ try
     
     subjdata.age = input('What is the participant age? ','s');
     
-    subjdata.gender = input('What is the participant age? ','s');
+    subjdata.gender = input('What is the participant gender? ','s');
+    
+    % grade
+    % school
     
     subjdata.runtime = datestr(now,0);
     
