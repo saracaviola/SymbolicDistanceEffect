@@ -12,6 +12,11 @@ try
    fprintf('First some demographic questions.\n\n\n');
     subjdata.code = input('What is the participant code? ','s');
     
+    subjdata.age = input('What is the participant age? ','s');
+    
+    
+    
+    
     KbName('UnifyKeyNames');
     
     d = IntializeDisplay;
