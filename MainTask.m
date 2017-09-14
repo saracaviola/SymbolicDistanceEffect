@@ -18,8 +18,9 @@ try
     
     subjdata.gender = input('What is the participant gender? ','s');
     
-    % grade
-    % school
+    subjdata.grade = input('What is the participant grade? ','s'); % grade
+    
+    subjdata.school = input('What is the participant school? ','s');% school
     
     subjdata.runtime = datestr(now,0);
     
