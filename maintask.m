@@ -3,13 +3,13 @@
 % https://github.com/ljcolling/SymbolicDistanceEffect
 
 %% Start of function
-clear
-clear all
-close all
+clear;
+close all;
 clc
 try
     
    % General questions to ask before hand 
+   fprintf('First some demographic questions.\n\n\n');
     subjdata.code = input('What is the participant code? ','s');
     
     KbName('UnifyKeyNames');
@@ -142,4 +142,5 @@ try
 catch ME
     ListenChar
     sca
+    save([subjdata.code,'.mat'])
 end
