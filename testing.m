@@ -1,13 +1,19 @@
-instructionsText = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam quis elit euismod, tristique tortor a, pulvinar arcu. Sed tincidunt mauris at ante auctor, quis ultrices tellus iaculis. Ut nec cursus magna, et vestibulum augue. Aliquam.'
+try
+fid = fopen('Instructions.txt','rt');
+c = fread(fid,'uint8=>char');
+fclose all;
 
-ListenChar(2)
+instructionsText = reshape(c,size(c,2),size(c,1));
+
+
 
 [device,keyList,LeftKey,RightKey] = SetupKeyboard;
 
 
 
-device = 3;
 
+
+ListenChar(2)
 d = IntializeDisplay;
 KbName('UnifyKeyNames')
 
@@ -58,5 +64,12 @@ while resizing == 1
    Screen('Flip', d.window);
 
 end
+
+
+
 ListenChar
 sca
+catch ME
+    ListenChar
+    sca
+end

@@ -1,10 +1,11 @@
-function [device,keyList,LeftKey,RightKey] = SetupKeyboard
+function [device,deviceName,keyList,LeftKey,RightKey] = SetupKeyboard
 
 [keyboardIndices, productNames, ~] = GetKeyboardIndices;
 for ki = 1 : length(productNames)
     useKeyboard = input(['Would you like to use ' productNames{ki} ' (y/n)? '],'s');
     if strcmpi(useKeyboard(1),'y')
         device = keyboardIndices(ki);
+        deviceName = productNames(ki);
         break
     end
 end

@@ -1,7 +1,8 @@
-function  responseStruct = DoTrial(responseStruct,d,p,allTrials,device,LeftKey,RightKey,t)
+function  responseStruct = DoTrial(responseStruct,d,p,allTrials,device,LeftKey,RightKey,t,typeText)
 % Present a trial
 
 % Draw a fixation
+Screen('TextSize',d.window,40)
 DrawFormattedText(d.window,'+','center','center',d.white)
 Screen('Flip',d.window);
 WaitSecs(p.tFixate/1000)
@@ -81,5 +82,6 @@ responseStruct(t).correct = correct;
 responseStruct(t).stimulusTime = stimulusTime;
 responseStruct(t).pressTime = pressTime;
 responseStruct(t).RT = thisRT;
+responseStruct(t).type = typeText;
 Screen('Flip',d.window);
 WaitSecs(p.tInterTrial/1000);
