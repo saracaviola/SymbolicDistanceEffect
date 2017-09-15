@@ -1,4 +1,8 @@
+clear;
+close all;
+
 try
+    addpath('functions')
     fid = fopen('Instructions.txt','rt');
     c = fread(fid,'uint8=>char');
     fclose all;

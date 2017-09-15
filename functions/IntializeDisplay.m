@@ -1,5 +1,5 @@
 function d = IntializeDisplay
-global ME;
+global ME
 
 try
 Screen('Preference','SkipSyncTests',1)
@@ -16,7 +16,7 @@ white = WhiteIndex(screenNumber);
 black = BlackIndex(screenNumber);
 
 
-[window, windowRect] = PsychImaging('OpenWindow', screenNumber, black,[0 0 640 360]);
+[window, windowRect] = PsychImaging('OpenWindow', screenNumber, black)%,[0 0 640 360]);
 
 [screenXpixels, screenYpixels] = Screen('WindowSize', window);
 [xCenter, yCenter] = RectCenter(windowRect);

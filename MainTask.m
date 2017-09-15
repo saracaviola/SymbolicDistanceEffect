@@ -126,6 +126,7 @@ try
     responseStruct = struct();
     blockCounter = 1;
     ListenChar(2)
+    HideCursor
     
     for t = 1 : size(allTrials,2)
         
@@ -160,13 +161,14 @@ try
     
     save(['data/',subjdata.code,'_data.mat'],'responseStruct','subjdata');
     ListenChar
+    ShowCursor
     sca
 catch ME
     ListenChar
     sca
-    
+    ShowCursor
     if exist('error','dir')==0
-        mkdir('data')
+        mkdir('error')
     end
     save(['error/',subjdata.code,'_error.mat']);
 end
