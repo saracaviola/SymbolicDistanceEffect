@@ -1,6 +1,6 @@
-# SymbolicDistanceEffect
+## SymbolicDistanceEffect
 
-## Installation Instructions
+### Installation Instructions
 
 Download the repository into a folder. 
 
@@ -10,6 +10,6 @@ At the prompt, type `Setup` to start the setup procedure. Make sure that you've 
 
 After the Setup is complete run `MainTask` to run the experiment. You should only need to run `Setup` once per machine. 
 
-## Configuration
+### Configuration
 
 To input the instructions of the main task, please edit the file called `Instructions.txt`. Write the instructions on one line. You'll be able to adjust the line breaking and font size when you run `Setup`
