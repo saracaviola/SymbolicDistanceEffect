@@ -1,7 +1,3 @@
-[![GitHub release](https://img.shields.io/github/release/qubyte/rubidium.svg)]()
-[![Github Pre-Releases](https://img.shields.io/github/downloads-pre/atom/atom/latest/total.svg)]()
-[![Conda](https://img.shields.io/conda/pn/conda-forge/python.svg)]()
-[![Read the Docs](https://img.shields.io/readthedocs/pip.svg)]()
 
 ## SymbolicDistanceEffect
 
